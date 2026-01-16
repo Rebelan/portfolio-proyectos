@@ -1,6 +1,83 @@
 
-*{
+
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* Variables de color */
+:root {
+  --bg-color: #0f172a;
+  --card-color: #1e293b;
+  --primary: #38bdf8;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+}
+
+/* Estilos generales */
+body {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Título */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: var(--primary);
+}
+
+/* Contenedor visual usando el body */
+body > a {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Enlaces como tarjetas */
+a {
+  display: block;
+  background-color: var(--card-color);
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1rem;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+a:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.15);
+}
+
+/* Separadores visuales (para los <br>) */
+br {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  a {
+    font-size: 0.95rem;
+    padding: 14px 16px;
+  }
+}
